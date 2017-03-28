@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_minus"
+            android:layout_weight="2.35"
+            android:tint="@color/colorPrimaryDark"
+            android:id="@+id/newItemMinus"
+            android:padding="3dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".75"
+            android:hint="Item Name"
+            android:textSize="18sp"
+            android:id="@+id/newItemName"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2.4"
+            android:text="$"
+            android:gravity="center"
+            android:textSize="18sp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:hint="Price"
+            android:inputType="numberDecimal"
+            android:gravity="right"
+            android:textSize="18sp"
+            android:id="@+id/newItemPrice"/>
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:background="@drawable/squarebox"
+        android:padding="5dp"
+        android:gravity="top|left"
+        android:textSize="18sp"
+        android:hint="Details"
+        android:id="@+id/newItemDetails"/>
+
+</LinearLayout>

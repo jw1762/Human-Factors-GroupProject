@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Restaurant Name"
+            android:id="@+id/newResName"
+            android:lines="1"
+            android:textSize="18sp"
+            android:paddingTop="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Restaurant Type:"
+                android:textSize="18sp"/>
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="135dp"
+                android:id="@id/res_type"
+                android:entries="@array/res_type"/>
+            </RelativeLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Restaurant Address"
+            android:id="@+id/newResAddress"
+            android:lines="1"
+            android:textSize="18sp"
+            android:paddingTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:id="@+id/newResCity"
+                android:lines="1"
+                android:textSize="18sp"
+                android:paddingTop="20dp"
+                android:inputType="textAutoCorrect|textAutoComplete"/>
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="State"
+                android:id="@+id/newResState"
+                android:lines="1"
+                android:textSize="18sp"
+                android:paddingTop="20dp"/>
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Zip"
+                android:id="@+id/newResZip"
+                android:lines="1"
+                android:textSize="18sp"
+                android:paddingTop="20dp"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Hours:"
+            android:textSize="18sp"
+            android:paddingTop="20dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 am  -"
+                android:layout_marginLeft="80dp"
+                android:onClick="time"
+                android:id="@+id/sunOpen"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 pm"
+                android:layout_marginLeft="155dp"
+                android:onClick="time"
+                android:id="@+id/sunClose"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Monday:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 am  -"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="80dp"
+                android:onClick="time"
+                android:id="@+id/monOpen"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 pm"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="155dp"
+                android:onClick="time"
+                android:id="@+id/monClose"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Tuesday:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 am  -"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="80dp"
+                android:onClick="time"
+                android:id="@+id/tuesOpen"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 pm"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="155dp"
+                android:onClick="time"
+                android:id="@+id/tuesClose"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="Wednesday:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 am  -"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="80dp"
+                android:onClick="time"
+                android:id="@+id/wedOpen"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 pm"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="155dp"
+                android:onClick="time"
+                android:id="@+id/wedClose"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:text="Thursday:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 am  -"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="80dp"
+                android:onClick="time"
+                android:id="@+id/thuOpen"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 pm"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="155dp"
+                android:onClick="time"
+                android:id="@+id/thuClose"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="Friday:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 am  -"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="80dp"
+                android:onClick="time"
+                android:id="@+id/friOpen"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 pm"
+                android:layout_marginTop="100dp"
+                android:layout_marginLeft="155dp"
+                android:onClick="time"
+                android:id="@+id/friClose"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:text="Saturday:"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 am  -"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="80dp"
+                android:onClick="time"
+                android:id="@+id/satOpen"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:00 pm"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="155dp"
+                android:onClick="time"
+                android:id="@+id/satClose"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Description:"
+            android:textSize="18dp"
+            android:paddingTop="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine|textCapSentences|textAutoComplete|textAutoCorrect"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:minHeight="150dp"
+            android:gravity="top|left"
+            android:maxLength="250"
+            android:id="@+id/resDescription"
+            android:background="@drawable/squarebox"
+            android:hint="Example: Happy Hour..."/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/textColor"
+                android:text="Cancel"
+                android:onClick="cancel"
+                android:layout_weight="1"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".99"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/textColor"
+                android:layout_weight="1"
+                android:text="Next"
+                android:onClick="next"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

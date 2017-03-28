@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.erikgarcia.otm.MainActivity">
+
+    <TextView
+        android:id="@+id/otm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="On The Menu"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:id="@+id/zip_code"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:hint="Zip Code"
+        android:maxLines="1"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zip_code"
+        android:layout_marginTop="32dp"
+        android:layout_toLeftOf="@+id/res_type"
+        android:text="Restaurant Type: "
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/res_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/zip_code"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="20dp"
+        android:entries="@array/res_type"/>
+
+    <Button
+        android:id="@+id/search_Button"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/res_type"
+        android:layout_marginTop="30dp"
+        android:text="Search"
+        android:onClick="readInput"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"/>
+    
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Sign up as Owner"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="signUpAsOwner"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/advancedSearch"
+        android:text="Advanced Search"
+        android:padding="10dp"
+        android:onClick="advancedSearch"
+        android:layout_below="@+id/search_Button"
+        android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/advancedSearchArrow"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/advancedSearch"
+        android:layout_below="@id/search_Button"
+        android:layout_alignBottom="@id/advancedSearch"
+        android:src="@drawable/arrow_dn"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:tint="@android:color/secondary_text_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/advancedSearch"
+        android:id="@+id/advancedSearchContainer"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/advanced_search_layout"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="Sign in as Owner"
+        android:onClick="signInAsOwner"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/search_Button"
+        android:layout_toStartOf="@+id/search_Button"
+        android:id="@+id/button"/>
+</RelativeLayout>
